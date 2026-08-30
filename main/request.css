@@ -1,0 +1,479 @@
+/* ==========================================
+   IDREMIS - REQUEST EMERGENCY PAGE
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BODY
+   ========================================== */
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            rgba(10, 15, 20, 0.78),
+            rgba(10, 15, 20, 0.78)
+        ),
+        url("../images/disaster.avif");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+
+    width: 100%;
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: #1a252f;
+
+    border-bottom: 4px solid #d32f2f;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.logo {
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    color: #ffffff;
+
+}
+
+
+.back-link {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    transition: 0.2s;
+
+}
+
+
+.back-link:hover {
+
+    background: #d32f2f;
+
+    color: #ffffff;
+
+}
+
+
+/* ==========================================
+   MAIN
+   ========================================== */
+
+main {
+
+    flex: 1;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 45px 20px;
+
+}
+
+
+/* ==========================================
+   REQUEST CARD
+   ========================================== */
+
+.request-card {
+
+    width: 100%;
+
+    max-width: 850px;
+
+    background: rgba(17, 24, 39, 0.96);
+
+    border: 1px solid #475569;
+
+    border-top: 5px solid #d32f2f;
+
+    border-radius: 10px;
+
+    padding: 35px 40px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.65);
+
+}
+
+
+/* ==========================================
+   CARD HEADER
+   ========================================== */
+
+.card-header {
+
+    margin-bottom: 28px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid #374151;
+
+}
+
+
+.card-header h1 {
+
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 8px;
+
+    color: #ffffff;
+
+}
+
+
+.card-header p {
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ==========================================
+   FORM
+   ========================================== */
+
+#emergencyForm {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 20px;
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Make details full width */
+
+.form-group:last-of-type {
+
+    grid-column: 1 / -1;
+
+}
+
+
+/* ==========================================
+   LABELS
+   ========================================== */
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ffc107;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================
+   INPUTS
+   ========================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px 13px;
+
+    border: 1px solid #64748b;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+    color: #64748b;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: #d32f2f;
+
+    box-shadow:
+        0 0 0 3px rgba(211, 47, 47, 0.2);
+
+}
+
+
+/* ==========================================
+   TEXTAREA
+   ========================================== */
+
+.form-group textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+}
+
+
+/* ==========================================
+   SUBMIT BUTTON
+   ========================================== */
+
+.submit-btn {
+
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    padding: 15px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #d32f2f;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+}
+
+
+.submit-btn:hover {
+
+    background: #b71c1c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(211, 47, 47, 0.45);
+
+}
+
+
+/* ==========================================
+   WARNING
+   ========================================== */
+
+.warning-text {
+
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+
+    width: 100%;
+
+    padding: 15px;
+
+    background: #111827;
+
+    border-top: 1px solid #374151;
+
+    color: #bdc3c7;
+
+    text-align: center;
+
+    font-size: 13px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    header {
+
+        padding: 15px 20px;
+
+        min-height: 65px;
+
+    }
+
+
+    .logo {
+
+        font-size: 18px;
+
+    }
+
+
+    .back-link {
+
+        font-size: 13px;
+
+    }
+
+
+    main {
+
+        padding: 25px 15px;
+
+    }
+
+
+    .request-card {
+
+        padding: 25px 20px;
+
+    }
+
+
+    .card-header h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    #emergencyForm {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .form-group:last-of-type {
+
+        grid-column: auto;
+
+    }
+
+
+    .submit-btn {
+
+        grid-column: auto;
+
+    }
+
+
+    .warning-text {
+
+        grid-column: auto;
+
+    }
+
+}

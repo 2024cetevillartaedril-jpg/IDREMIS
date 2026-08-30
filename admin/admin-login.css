@@ -1,0 +1,376 @@
+/* ==========================================
+   IDREMIS - ADMIN LOGIN
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    color: #ffffff;
+
+    /* DISASTER BACKGROUND */
+    background:
+        linear-gradient(
+            rgba(8, 14, 22, 0.72),
+            rgba(8, 14, 22, 0.72)
+        ),
+        url("../images/disaster.avif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    width: 100%;
+    min-height: 78px;
+
+    padding: 0 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #1a252f;
+
+    border-bottom: 4px solid #d32f2f;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.55);
+
+    flex-shrink: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+/* ==========================================
+   BACK TO PUBLIC PORTAL
+   ========================================== */
+
+.back-link {
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    padding: 10px 14px;
+
+    border-radius: 5px;
+
+    transition: all 0.2s ease;
+}
+
+.back-link:hover {
+    color: #ffc107;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* ==========================================
+   MAIN AREA
+   ========================================== */
+
+main {
+    flex: 1;
+
+    width: 100%;
+
+    min-height: calc(100vh - 138px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ==========================================
+   LOGIN CARD
+   ========================================== */
+
+.login-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 38px 40px;
+
+    background: rgba(15, 23, 42, 0.96);
+
+    border: 1px solid #475569;
+
+    border-top: 5px solid #d32f2f;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.75);
+
+    backdrop-filter: blur(5px);
+}
+
+
+/* ==========================================
+   LOGIN ICON
+   ========================================== */
+
+.login-card .icon {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   TITLE
+   ========================================== */
+
+.login-card h1 {
+    color: #ffffff;
+
+    font-size: 30px;
+
+    font-weight: 900;
+
+    margin-bottom: 7px;
+}
+
+
+/* ==========================================
+   SUBTITLE
+   ========================================== */
+
+.login-card .subtitle {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==========================================
+   FORM GROUP
+   ========================================== */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    color: #ffc107;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* ==========================================
+   INPUTS
+   ========================================== */
+
+.form-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 14px;
+
+    border: 1px solid #64748b;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #111827;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+.form-group input:focus {
+    border-color: #d32f2f;
+
+    box-shadow:
+        0 0 0 3px rgba(211, 47, 47, 0.2);
+}
+
+
+/* ==========================================
+   LOGIN BUTTON
+   ========================================== */
+
+.login-btn {
+    width: 100%;
+
+    height: 48px;
+
+    margin-top: 4px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #d32f2f;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+    background: #b71c1c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(211, 47, 47, 0.45);
+}
+
+.login-btn:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   SECURITY NOTICE
+   ========================================== */
+
+.security-notice {
+    margin-top: 22px;
+
+    padding: 12px 14px;
+
+    background: rgba(255, 193, 7, 0.08);
+
+    border-left: 4px solid #ffc107;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    border-radius: 3px;
+}
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+    width: 100%;
+
+    min-height: 60px;
+
+    padding: 18px 20px;
+
+    background: #111827;
+
+    border-top: 1px solid #374151;
+
+    color: #bdc3c7;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        min-height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .back-link {
+        font-size: 13px;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    .login-card {
+        padding: 30px 25px;
+    }
+
+    .login-card h1 {
+        font-size: 25px;
+    }
+}

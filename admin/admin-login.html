@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IDREMIS | Admin Login</title>
+
+    <link rel="stylesheet" href="admin-login.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header>
+
+        <div class="logo">
+            IDREMIS
+        </div>
+
+        <a href="../main/index.html" class="back-link">
+            ← Back to Public Portal
+        </a>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main>
+
+        <div class="login-card">
+
+
+            <!-- LOGIN ICON -->
+
+            <div class="icon">
+                🔐
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h1>
+                Admin Portal Access
+            </h1>
+
+
+            <p class="subtitle">
+                Authorized personnel only. Please log in.
+            </p>
+
+
+
+            <!-- ==========================================
+                 LOGIN FORM
+                 ========================================== -->
+
+            <form id="adminLoginForm">
+
+
+                <!-- ADMIN ID -->
+
+                <div class="form-group">
+
+                    <label for="adminId">
+                        Username / ID Number
+                    </label>
+
+                    <input
+                        type="text"
+                        id="adminId"
+                        name="adminId"
+                        placeholder="Enter administrative ID"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Enter password"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Authenticate & Access
+                </button>
+
+
+            </form>
+
+
+
+            <!-- SECURITY NOTICE -->
+
+            <div class="security-notice">
+
+                🔒 This portal is restricted to authorized
+                CDRRMO personnel. Unauthorized access is prohibited.
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+
+    <footer>
+
+        City Disaster Risk Reduction and Management Office
+        — General Santos City
+
+    </footer>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script>
+
+
+        // ==========================================
+        // DEMO ADMIN CREDENTIALS
+        // ==========================================
+
+        const ADMIN_ID = "admin";
+
+        const ADMIN_PASSWORD = "admin123";
+
+
+
+        // ==========================================
+        // GET LOGIN FORM
+        // ==========================================
+
+        const loginForm =
+            document.getElementById("adminLoginForm");
+
+
+
+        // ==========================================
+        // LOGIN EVENT
+        // ==========================================
+
+        loginForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            // Get entered ID
+
+            const enteredId =
+                document.getElementById("adminId").value.trim();
+
+
+            // Get entered password
+
+            const enteredPassword =
+                document.getElementById("password").value;
+
+
+
+            // ==========================================
+            // CHECK LOGIN
+            // ==========================================
+
+            if (
+                enteredId === ADMIN_ID &&
+                enteredPassword === ADMIN_PASSWORD
+            ) {
+
+                alert(
+                    "Login successful! Welcome to the IDREMIS Admin Portal."
+                );
+
+
+                // Go to Admin Portal
+
+                window.location.href = "admin.html";
+
+
+            } else {
+
+                alert(
+                    "Invalid administrative ID or password."
+                );
+
+            }
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>

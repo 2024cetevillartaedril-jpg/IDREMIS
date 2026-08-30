@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IDREMIS | Request Emergency Assistance</title>
+
+    <link rel="stylesheet" href="request.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            CDRRMO EMERGENCY CENTER
+        </div>
+
+        <a href="index.html" class="back-link">
+            ← Back to Main Page
+        </a>
+
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <div class="request-card">
+
+            <div class="card-header">
+
+                <h1>Request Immediate Emergency Assistance</h1>
+
+                <p>
+                    Please fill out this form to dispatch emergency responders
+                    to your exact location.
+                </p>
+
+            </div>
+
+
+            <!-- EMERGENCY FORM -->
+            <form id="emergencyForm">
+
+
+                <!-- FULL NAME -->
+                <div class="form-group">
+
+                    <label for="fullName">
+                        Full Name (Pangalan)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        name="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- PHONE NUMBER -->
+                <div class="form-group">
+
+                    <label for="phone">
+                        Phone Number (Numero ng Telepono)
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="e.g. 0917 123 4567"
+                        pattern="[0-9\s\-\+]{10,15}"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- LOCATION -->
+                <div class="form-group">
+
+                    <label for="location">
+                        Current Barangay / Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="e.g. Barangay Dadiangas East"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- EMERGENCY TYPE -->
+                <div class="form-group">
+
+                    <label for="emergencyType">
+                        Type of Emergency
+                    </label>
+
+                    <select
+                        id="emergencyType"
+                        name="emergencyType"
+                        required
+                    >
+
+                        <option value="">
+                            Select emergency type
+                        </option>
+
+                        <option value="Fire">
+                            🔥 Fire
+                        </option>
+
+                        <option value="Flood">
+                            🌊 Flood / Flash Flood
+                        </option>
+
+                        <option value="Landslide">
+                            ⛰️ Landslide
+                        </option>
+
+                        <option value="Earthquake">
+                            🌎 Earthquake
+                        </option>
+
+                        <option value="Structural Damage">
+                            🏚️ Structural Damage
+                        </option>
+
+                        <option value="Medical Emergency">
+                            🚑 Medical Emergency
+                        </option>
+
+                        <option value="Power Outage">
+                            ⚡ Power Outage
+                        </option>
+
+                        <option value="Other">
+                            ⚠️ Other Emergency
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- NUMBER OF PEOPLE -->
+                <div class="form-group">
+
+                    <label for="affected">
+                        Number of People Needing Assistance
+                    </label>
+
+                    <input
+                        type="number"
+                        id="affected"
+                        name="affected"
+                        min="1"
+                        placeholder="e.g. 5"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DETAILS -->
+                <div class="form-group">
+
+                    <label for="details">
+                        Additional Details
+                    </label>
+
+                    <textarea
+                        id="details"
+                        name="details"
+                        placeholder="Describe your situation, injuries, damage, or other important information..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    🚨 Send Emergency Alert
+                </button>
+
+
+                <p class="warning-text">
+                    ⚠️ Only submit this form during an actual emergency.
+                </p>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        City Disaster Risk Reduction and Management Office
+        — General Santos City
+
+    </footer>
+
+
+    <!-- BASIC JAVASCRIPT -->
+    <script>
+
+        const emergencyForm =
+            document.getElementById("emergencyForm");
+
+        emergencyForm.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            alert(
+                "Emergency alert submitted successfully. CDRRMO responders have received your request."
+            );
+
+            emergencyForm.reset();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
