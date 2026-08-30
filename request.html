@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Emergency Assistance | CDRRMO</title>
+    <link rel="stylesheet" href="request.css">
+</head>
+<body>
+
+    <header>
+        <h1>CDRRMO Emergency Center</h1>
+        <a href="index.html">&larr; Back to Main Page</a>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Request Immediate Emergency Assistance</h2>
+            <p class="subtext">Please fill out this form to dispatch emergency responders to your exact location.</p>
+
+            <form action="#" method="POST">
+                <label for="fullname">Full Name (Pangalan):</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                <label for="phone">Phone Number (Numero ng Telepono):</label>
+                <input type="text" id="phone" name="phone" placeholder="e.g. 0917 123 4567" required>
+
+                <label for="location">Current Barangay / Location:</label>
+                <input type="text" id="location" name="location" placeholder="e.g. Barangay Dadiangas East" required>
+
+                <label for="emergency_type">Type of Emergency:</label>
+                <select id="emergency_type" name="emergency_type" required>
+                    <option value="" disabled selected>Select emergency type</option>
+                    <option value="flooding">Flooding / Water Rescue</option>
+                    <option value="medical">Medical Emergency</option>
+                    <option value="trapped">Trapped / Rescue Needed</option>
+                    <option value="fire">Fire Incident</option>
+                </select>
+
+                <label for="details">Additional Details:</label>
+                <textarea id="details" name="details" rows="3" placeholder="Describe your situation or number of people needing assistance"></textarea>
+
+                <button type="submit" class="btn-submit">Send Emergency Alert Now</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        City Disaster Risk Reduction and Management Office &mdash; General Santos City
+    </footer>
+
+</body>
+</html>

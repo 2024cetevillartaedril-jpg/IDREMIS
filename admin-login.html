@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDREMIS | Admin Login</title>
+    <link rel="stylesheet" href="admin-login.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">IDREMIS</div>
+        <a href="index.html" class="back-link">&larr; Back to Public Portal</a>
+    </header>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="lock-icon">🔒</div>
+            <h2>Admin Portal Access</h2>
+            <p class="subtext">Authorized personnel only. Please log in.</p>
+
+            <form action="admin.html" method="GET">
+                <div class="form-group">
+                    <label for="username">Username / ID Number</label>
+                    <input type="text" id="username" placeholder="Enter administrative ID" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter password" required>
+                </div>
+
+                <button type="submit" class="btn-login">Authenticate & Access</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        City Disaster Risk Reduction and Management Office &mdash; General Santos City
+    </footer>
+
+</body>
+</html>

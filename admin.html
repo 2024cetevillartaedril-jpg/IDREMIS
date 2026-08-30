@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDREMIS | Admin Management Portal</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">IDREMIS Admin Portal</div>
+        <div class="user-info">
+            <span>Role: <strong>CDRRMO Officer</strong></span>
+            <a href="index.html" class="btn-logout">Logout &rarr;</a>
+        </div>
+    </header>
+
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <div class="actor-badge">CDRRMO / Responder Access</div>
+            <nav class="sidebar-nav">
+                <a href="#incidents" class="nav-item active">
+                    <span>📋</span> Incidents & Reports
+                </a>
+                <a href="#evacuation" class="nav-item">
+                    <span>🏢</span> Evacuation Centers
+                </a>
+                <a href="#relief" class="nav-item">
+                    <span>📦</span> Relief Operations
+                </a>
+                <a href="#inventory" class="nav-item">
+                    <span>🚜</span> Resources & Inventory
+                </a>
+                <a href="#reports" class="nav-item">
+                    <span>📊</span> Reports & Analytics
+                </a>
+                <a href="#logs" class="nav-item">
+                    <span>🛡️</span> System & Audit Logs
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            
+            <section id="incidents" class="card">
+                <div class="card-header">
+                    <h2>Manage Incidents & Emergency Reports (TPS)</h2>
+                    <button class="btn-action">+ New Incident Log</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Incident ID</th>
+                                <th>Location (Barangay)</th>
+                                <th>Emergency Type</th>
+                                <th>Affected</th>
+                                <th>Severity</th>
+                                <th>Assigned Unit</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>INC-2026-001</td>
+                                <td>Dadiangas East</td>
+                                <td>Flash Flood</td>
+                                <td>150</td>
+                                <td><span class="badge badge-danger">High</span></td>
+                                <td>Rescue Team Alpha</td>
+                                <td>Active Response</td>
+                                <td><button class="btn-sm">Update</button></td>
+                            </tr>
+                            <tr>
+                                <td>INC-2026-002</td>
+                                <td>Labangal</td>
+                                <td>Landslide Warning</td>
+                                <td>45</td>
+                                <td><span class="badge badge-danger">Critical</span></td>
+                                <td>Barangay Response Unit</td>
+                                <td>Team Dispatched</td>
+                                <td><button class="btn-sm">Update</button></td>
+                            </tr>
+                            <tr>
+                                <td>INC-2026-003</td>
+                                <td>Lagao</td>
+                                <td>Power Outage</td>
+                                <td>320</td>
+                                <td><span class="badge badge-warning">Medium</span></td>
+                                <td>Utility / CDRRMO</td>
+                                <td>Monitoring</td>
+                                <td><button class="btn-sm">Update</button></td>
+                            </tr>
+                            <tr>
+                                <td>INC-2026-004</td>
+                                <td>Calumpang</td>
+                                <td>Minor Flooding</td>
+                                <td>12</td>
+                                <td><span class="badge badge-success">Low</span></td>
+                                <td>Volunteers Team 2</td>
+                                <td>Resolved</td>
+                                <td><button class="btn-sm">Update</button></td>
+                            </tr>
+                            <tr>
+                                <td>INC-2026-005</td>
+                                <td>Apopong</td>
+                                <td>Structural Damage</td>
+                                <td>88</td>
+                                <td><span class="badge badge-warning">Medium</span></td>
+                                <td>Engineering & Rescue</td>
+                                <td>Assessing</td>
+                                <td><button class="btn-sm">Update</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="evacuation" class="card">
+                <div class="card-header">
+                    <h2>Evacuation Center Occupancy Status (MIS)</h2>
+                    <button class="btn-action">+ Add Facility</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Center ID</th>
+                                <th>Facility Name</th>
+                                <th>Barangay</th>
+                                <th>Capacity</th>
+                                <th>Occupants</th>
+                                <th>Medical Staff</th>
+                                <th>Occupancy Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EVC-01</td>
+                                <td>Dadiangas Elementary Gym</td>
+                                <td>Dadiangas Center</td>
+                                <td>500</td>
+                                <td>450</td>
+                                <td>Medical Team A</td>
+                                <td><span class="badge badge-danger">90% Full</span></td>
+                            </tr>
+                            <tr>
+                                <td>EVC-02</td>
+                                <td>Labangal Covered Court</td>
+                                <td>Labangal</td>
+                                <td>300</td>
+                                <td>180</td>
+                                <td>Medical Team B</td>
+                                <td><span class="badge badge-warning">60% Moderate</span></td>
+                            </tr>
+                            <tr>
+                                <td>EVC-03</td>
+                                <td>Lagao Barangay Hall</td>
+                                <td>Lagao</td>
+                                <td>150</td>
+                                <td>145</td>
+                                <td>Volunteer Medics</td>
+                                <td><span class="badge badge-danger">97% Full</span></td>
+                            </tr>
+                            <tr>
+                                <td>EVC-04</td>
+                                <td>Calumpang High Auditorium</td>
+                                <td>Calumpang</td>
+                                <td>600</td>
+                                <td>210</td>
+                                <td>Medical Team C</td>
+                                <td><span class="badge badge-success">35% Available</span></td>
+                            </tr>
+                            <tr>
+                                <td>EVC-05</td>
+                                <td>Apopong Sports Complex</td>
+                                <td>Apopong</td>
+                                <td>800</td>
+                                <td>310</td>
+                                <td>Medical Team D</td>
+                                <td><span class="badge badge-success">38% Available</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="relief" class="card">
+                <div class="card-header">
+                    <h2>Relief Supplies & Resource Inventory</h2>
+                    <button class="btn-action">+ Update Stock</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item ID</th>
+                                <th>Resource Description</th>
+                                <th>Category</th>
+                                <th>Quantity</th>
+                                <th>Unit</th>
+                                <th>Target Location</th>
+                                <th>Stock Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>REL-101</td>
+                                <td>Family Food Packs</td>
+                                <td>Food Ration</td>
+                                <td>1,200</td>
+                                <td>Boxes</td>
+                                <td>Dadiangas East / Labangal</td>
+                                <td><span class="badge badge-success">Sufficient</span></td>
+                            </tr>
+                            <tr>
+                                <td>REL-102</td>
+                                <td>Drinking Water (5L)</td>
+                                <td>Potable Water</td>
+                                <td>350</td>
+                                <td>Bottles</td>
+                                <td>All Evacuation Centers</td>
+                                <td><span class="badge badge-warning">Low Stock</span></td>
+                            </tr>
+                            <tr>
+                                <td>REL-103</td>
+                                <td>Emergency Hygiene Kits</td>
+                                <td>Non-Food Item</td>
+                                <td>850</td>
+                                <td>Kits</td>
+                                <td>Lagao / Calumpang</td>
+                                <td><span class="badge badge-success">Sufficient</span></td>
+                            </tr>
+                            <tr>
+                                <td>REL-104</td>
+                                <td>First Aid Medical Packs</td>
+                                <td>Medical</td>
+                                <td>80</td>
+                                <td>Packs</td>
+                                <td>Rescue Teams</td>
+                                <td><span class="badge badge-danger">Critical Low</span></td>
+                            </tr>
+                            <tr>
+                                <td>REL-105</td>
+                                <td>Blankets & Sleeping Mats</td>
+                                <td>Shelter Supply</td>
+                                <td>500</td>
+                                <td>Units</td>
+                                <td>Apopong Gym</td>
+                                <td><span class="badge badge-success">Sufficient</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        City Disaster Risk Reduction and Management Office &mdash; General Santos City
+    </footer>
+
+</body>
+</html>
